@@ -1,0 +1,203 @@
+@charset "utf-8";
+body {
+	font: 110%/1.4 Garamond, Georgia, "Times New Roman", Times, serif, sans-serif;
+	background-color: #F9F9F9;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+.container {
+	width: 80%;
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+}
+
+.header {
+	height:170px;
+	background: #E8E8E8;
+	background: -webkit-linear-gradient(#E8E8E8, #ffffff);
+	background: -moz-linear-gradient(#E8E8E8, #ffffff);
+	background: linear-gradient(#E8E8E8, #ffffff);
+	border-bottom: 2px dotted #888;
+	border-top: 2px dotted #888;
+
+}
+
+.b2blogo {
+	float:left;
+	padding-left: 20px;
+}
+
+.b2btitle {
+	float:right;
+	font-size: 42px;
+	padding-right: 60px;
+	padding-top:40px;
+}
+
+.b2bsubtitle {
+	clear:right;
+	float:right;
+	font-size: 24px;
+	padding-right: 60px;
+}
+
+.sidebar {
+	clear:both;
+	float: left;
+	width: 20%;
+	min-width: 180px;
+	height: auto;
+	background: #E8E8E8;
+	background: -webkit-linear-gradient(#E8E8E8, #ffffff);
+	background: -moz-linear-gradient(#E8E8E8, #ffffff);
+	background: linear-gradient(#E8E8E8, #ffffff);
+	bottom: 0px;
+	word-wrap:break-word;
+}
+
+.content {
+	float:right;
+	width:75%;
+/*	background: #E8E8E0;*/
+}
+
+ul.nav {
+	background: #E8E8E8;
+	background: -webkit-linear-gradient(#E8E8E8, #ffffff);
+	background: -moz-linear-gradient(#E8E8E8, #ffffff);
+	background: linear-gradient(#E8E8E8, #ffffff);
+	list-style: none; /* this removes the list marker */
+	/* [disabled]border-top: 2px dotted #888;*/ /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+
+ul.nav li {
+	border-bottom: 2px dotted #888;
+}
+
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 5px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	color: #000;
+}
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background-color: #bbb;
+	color: #414141;
+}
+
+.footer {
+	padding: 10px 0;
+	background: #E8E8E8;
+	background: -webkit-linear-gradient(#E8E8E8, #ffffff);
+	background: -moz-linear-gradient(#E8E8E8, #ffffff);
+	background: linear-gradient(#E8E8E8, #ffffff);
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both;
+	text-align: center;
+	padding-top: 20px;
+	border-top: 2px dotted #888;
+	border-bottom: 2px dotted #888;
+}
+
+.noticebox {
+	background-color: #DDDDD9;
+	text-align: left;
+	display: block;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-top: 15px;
+	border-radius: 7px;
+	width: 70%;
+}
+
+
+
+
+.FAQ { 
+  vertical-align: top; 
+  height: auto; 
+}
+
+.list {
+  display:none; 
+  height:auto;
+  margin:0;
+  float: left;
+}
+
+.show {
+  display: none; 
+}
+
+.hide:target + .show {
+  display: inline; 
+}
+.hide:target {
+  display: none; 
+}
+.hide:target ~ .list {
+  display:inline; 
+}
+
+/*style the (+) and (-) */
+.hide, .show {
+  width: 80%;
+  height: 30px;
+  border-radius: 3px;
+  background: #DDDDD9;
+  margin-right: 0;
+  float: left;
+  margin-bottom: 15px;
+  padding-left: 15px;
+
+}
+
+.hide:hover, .show:hover {
+  text-decoration: none;
+  box-shadow: 0 0 4px #222 inset;
+  margin-bottom: 15px;
+}
+
+.list p {
+  height:auto;
+  margin:0;
+}
+.question {
+  float: left;
+  height: auto;
+  width: 90%;
+  line-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+
+}

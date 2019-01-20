@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="GenPassDialog">
+		<centered>1</centered>
+		<size>474,455</size>
+		<font>
+			<size>8</size>
+			<style>normal</style>
+			<weight>normal</weight>
+			<underlined>0</underlined>
+			<family>swiss</family>
+			<face>Tahoma</face>
+		</font>
+		<id_arg>0</id_arg>
+		<handler function="OnInit" entry="EVT_INIT_DIALOG" />
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<label>Master Password</label>
+			<pos>8,256</pos>
+			<size>456,152</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<label>Password Generator</label>
+			<pos>8,8</pos>
+			<size>456,240</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX_MNE" variable="CheckBox_Mne" member="yes">
+			<label>Use Mnemonic Password Generator</label>
+			<pos>24,88</pos>
+			<handler function="OnCheckBox_MneClick" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Type at least 10 words from a song or a book or any movie dialogue which you remember precisely and of which you are certain that you will never forget them. Your password is first letters of each word. Case sensitive.</label>
+			<pos>24,168</pos>
+			<size>432,40</size>
+			<style>wxST_NO_AUTORESIZE</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_MNEMO" variable="TextCtrlMnemonic" member="yes">
+			<pos>24,144</pos>
+			<size>432,21</size>
+			<enabled>0</enabled>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT_MASTERWARN" variable="StaticTextMasterWarn" member="yes">
+			<label>Warning: This is the master password. If you lose it, there is no way to get it back. If you forget it, you will lose access to all saved passwords !</label>
+			<pos>24,352</pos>
+			<size>432,40</size>
+			<fg>#FF0000</fg>
+			<style>wxST_NO_AUTORESIZE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Warning: This is easy to remember but is also easy to hack or guess !</label>
+			<pos>24,112</pos>
+			<size>432,24</size>
+			<fg>#800000</fg>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX_RND" variable="CheckBoxRnd" member="yes">
+			<label>Use Random Password Generator</label>
+			<pos>24,32</pos>
+			<handler function="OnCheckBoxRndClick" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+			<label>Warning: This is very secure but very difficult to remember !</label>
+			<pos>24,56</pos>
+			<size>432,24</size>
+			<fg>#800000</fg>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT_MASTER1" variable="StaticTextMaster1" member="yes">
+			<label>Password:</label>
+			<pos>40,288</pos>
+			<size>123,13</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT_MASTER2" variable="StaticTextMaster2" member="yes">
+			<label>Confirm Password:</label>
+			<pos>40,320</pos>
+			<size>128,13</size>
+			<style>wxALIGN_RIGHT</style>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_MASTER1" variable="TextCtrlMaster1" member="yes">
+			<pos>192,280</pos>
+			<size>224,21</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_MASTER2" variable="TextCtrlMaster2" member="yes">
+			<pos>192,312</pos>
+			<size>224,21</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON_GENPASS" variable="ButtonGenPass" member="yes">
+			<label>Generate</label>
+			<pos>192,216</pos>
+			<enabled>0</enabled>
+			<handler function="OnButtonGenPassClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON_APPLYPASS" variable="ButtonApplyPass" member="yes">
+			<label>Apply</label>
+			<pos>192,416</pos>
+			<handler function="OnButtonApplyPassClick" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

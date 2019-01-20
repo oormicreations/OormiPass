@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="DisclaimerDialog">
+		<title>Oormi Pass License and Disclaimer</title>
+		<centered>1</centered>
+		<size>400,318</size>
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_DIS" variable="TextCtrlDis" member="yes">
+			<value>Text</value>
+			<pos>16,16</pos>
+			<size>368,240</size>
+			<style>wxTE_MULTILINE|wxTE_READONLY|wxVSCROLL</style>
+		</object>
+		<object class="wxButton" name="ID_BUTTON_ACC" variable="ButtonAccept" member="yes">
+			<label>Accept and Continue</label>
+			<pos>240,272</pos>
+		</object>
+		<object class="wxButton" name="ID_BUTTON_EXIT" variable="ButtonExit" member="yes">
+			<label>Exit</label>
+			<pos>16,272</pos>
+		</object>
+	</object>
+</wxsmith>

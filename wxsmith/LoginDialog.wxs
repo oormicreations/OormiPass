@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="LoginDialog">
+		<title>Oormi Pass :: Password Manager</title>
+		<centered>1</centered>
+		<size>358,96</size>
+		<font>
+			<size>8</size>
+			<style>normal</style>
+			<weight>normal</weight>
+			<underlined>0</underlined>
+			<family>swiss</family>
+			<face>Tahoma</face>
+		</font>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<label>Enter Master Password</label>
+			<pos>16,8</pos>
+			<size>320,72</size>
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL_MASTERPASS" variable="TextCtrlMasterPass" member="yes">
+			<pos>32,32</pos>
+			<size>208,23</size>
+			<style>wxTE_PASSWORD</style>
+		</object>
+		<object class="wxButton" name="ID_BUTTON_SUBMASTER" variable="ButtonSubmitMaster" member="yes">
+			<label>Go</label>
+			<default>1</default>
+			<pos>248,32</pos>
+			<handler function="OnButtonSubmitMasterClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON_NEWMASTER" variable="ButtonNewMaster" member="yes">
+			<label>New Master Password</label>
+			<pos>32,64</pos>
+			<hidden>1</hidden>
+			<handler function="OnButtonNewMasterClick" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

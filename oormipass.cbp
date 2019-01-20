@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="oormipass" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/oormipass" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="G:/wxWidgets-3.1.2/lib/gcc_lib/mswu" />
+					<Add directory="G:/cryptopp563" />
+					<Add directory="graphics" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="G:/wxWidgets-3.1.2/lib/gcc_lib/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="G:/cryptopp563/libcryptopp.a" />
+					<Add library="libwxmsw31u.a" />
+					<Add library="libwxpng.a" />
+					<Add library="libwxjpeg.a" />
+					<Add library="libwxtiff.a" />
+					<Add library="libwxzlib.a" />
+					<Add directory="G:/wxWidgets-3.1.2/lib/gcc_lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/oormipass" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add directory="G:/wxWidgets-3.1.2/lib/gcc_lib/mswu" />
+					<Add directory="include" />
+					<Add directory="G:/cryptopp563" />
+					<Add directory="graphics" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="G:/wxWidgets-3.1.2/lib/gcc_lib/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw31u.a" />
+					<Add library="libwxpng.a" />
+					<Add library="libwxjpeg.a" />
+					<Add library="libwxtiff.a" />
+					<Add library="libwxzlib.a" />
+					<Add library="G:/cryptopp563/libcryptopp.a" />
+					<Add directory="G:/wxWidgets-3.1.2/lib/gcc_lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add option="-Wall" />
+			<Add directory="G:/wxWidgets-3.1.2/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="G:/wxWidgets-3.1.2/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+			<Add library="libkernel32.a" />
+			<Add library="libuser32.a" />
+			<Add library="libgdi32.a" />
+			<Add library="libwinspool.a" />
+			<Add library="libcomdlg32.a" />
+			<Add library="libadvapi32.a" />
+			<Add library="libshell32.a" />
+			<Add library="libole32.a" />
+			<Add library="liboleaut32.a" />
+			<Add library="libuuid.a" />
+			<Add library="libcomctl32.a" />
+			<Add library="libwsock32.a" />
+			<Add library="libodbc32.a" />
+			<Add library="libshlwapi.a" />
+			<Add library="libversion.a" />
+		</Linker>
+		<Unit filename="include/CryptHelper.h" />
+		<Unit filename="include/DisclaimerDialog.h" />
+		<Unit filename="include/FileHelper.h" />
+		<Unit filename="include/GenPassDialog.h" />
+		<Unit filename="include/LoginDialog.h" />
+		<Unit filename="include/PassItem.h" />
+		<Unit filename="include/oormipassApp.h" />
+		<Unit filename="include/oormipassMain.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/CryptHelper.cpp" />
+		<Unit filename="src/DisclaimerDialog.cpp" />
+		<Unit filename="src/FileHelper.cpp" />
+		<Unit filename="src/GenPassDialog.cpp" />
+		<Unit filename="src/LoginDialog.cpp" />
+		<Unit filename="src/PassItem.cpp" />
+		<Unit filename="src/oormipassApp.cpp" />
+		<Unit filename="src/oormipassMain.cpp" />
+		<Unit filename="wxsmith/DisclaimerDialog.wxs" />
+		<Unit filename="wxsmith/GenPassDialog.wxs" />
+		<Unit filename="wxsmith/LoginDialog.wxs" />
+		<Unit filename="wxsmith/oormipassframe.wxs" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="src\oormipassApp.cpp" main="oormipassFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/oormipassframe.wxs" src="src\oormipassMain.cpp" hdr="include\oormipassMain.h" fwddecl="0" i18n="1" name="oormipassFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/LoginDialog.wxs" src="src\LoginDialog.cpp" hdr="include\LoginDialog.h" fwddecl="0" i18n="1" name="LoginDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/GenPassDialog.wxs" src="src\GenPassDialog.cpp" hdr="include\GenPassDialog.h" fwddecl="0" i18n="1" name="GenPassDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/DisclaimerDialog.wxs" src="DisclaimerDialog.cpp" hdr="DisclaimerDialog.h" fwddecl="0" i18n="1" name="DisclaimerDialog" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
